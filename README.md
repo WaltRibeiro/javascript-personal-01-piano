@@ -1,1 +1,1 @@
-# javascript-piano-2
+# javascript-piano-1
