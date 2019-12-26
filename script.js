@@ -1,3 +1,3 @@
-var = test;
+//new file
 
 console.log("hello");
