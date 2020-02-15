@@ -3,17 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Javascript Piano 2</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src ="script.js"></script>
+  <title>Walt's Piano</title>
 </head>
 <body>
-  <div class="piano"></div>
-  <div class="div">
+  
 
 
-</div>
-</div>
+  <div class="piano">
+    <div id="note-c"        data-note="c"      class="key white"></div>
+    <div id="note-d-flat"   data-note="d-flat" class="key black"></div>
+    <div id="note-d"        data-note="d"      class="key white"></div>
+    <div id="note-e-flat"   data-note="e-flat" class="key black"></div>
+    <div id="note-e"        data-note="e"      class="key white"></div>
+    <div id="note-f"        data-note="f"      class="key white"></div>
+    <div id="note-g-flat"   data-note="g-flat" class="key black"></div>
+    <div id="note-g"        data-note="g"      class="key white"></div>
+    <div id="note-a-flat"   data-note="a-flat" class="key black"></div>
+    <div id="note-a"        data-note="a"      class="key white"></div>
+    <div id="note-b-flat"   data-note="b-flat" class="key black"></div>
+    <div id="note-b"        data-note="b"      class="key white"></div>
+  </div>
+
+  <audio id="c"       src="notes/piano-c.mp3"     ></audio>
+  <audio id="audio-d-flat"  src="notes/piano-d-flat.mp3"></audio>
+  <audio id="audio-d"       src="notes/piano-d.mp3"     ></audio>
+  <audio id="audio-e-flat"  src="notes/piano-e-flat.mp3"></audio>
+  <audio id="audio-e"       src="notes/piano-e.mp3"     ></audio>
+  <audio id="audio-f"       src="notes/piano-f.mp3"     ></audio>
+  <audio id="audio-g-flat"  src="notes/piano-g-flat.mp3"></audio>
+  <audio id="audio-g"       src="notes/piano-g.mp3"     ></audio>
+  <audio id="audio-a-flat"  src="notes/piano-a-flat.mp3"></audio>
+  <audio id="audio-a"       src="notes/piano-a.mp3"     ></audio>
+  <audio id="audio-b-flat"  src="notes/piano-b-flat.mp3"></audio>
+  <audio id="audio-b"       src="notes/piano-b.mp3"     ></audio>
+  
+<br>
+
+<!-- Portfolio Modal - Text -->
+
+<p id="demo" class="displayMusicNote"></p>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js"></script>
+
 </body>
 </html>
