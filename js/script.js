@@ -114,7 +114,9 @@ for (i = 0; i < notesThreeBlindMice.length; i++) {
 
 function songFunction() {
 
+  var notesNBC = [c, a, f];
     var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
+    var notesFrereJacques = [c, d, e, c, c, d, e, c, e, f, g, e, f, g];
 
     document.getElementById("note-e").classList.remove("white");
     document.getElementById("note-e").classList.add("highlight");
