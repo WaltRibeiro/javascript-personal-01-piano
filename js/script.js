@@ -8,19 +8,22 @@ const blackKeys = document.querySelectorAll('.key.black')
 keys.forEach(key => {
   key.addEventListener('click', () => {
     playNote(key);
-    displayNoteLetter(key);
+    // displayNoteLetter(key);
   })
 })
 
-document.addEventListener('keydown', e => {
-  if (e.repeat) return
-  const key = e.key
+// key press down plays the note
+
+document.addEventListener('keydown', event => {
+  if (event.repeat) return
+  const key = event.key
   const whiteKeyIndex = WHITE_KEYS.indexOf(key)
   const blackKeyIndex = BLACK_KEYS.indexOf(key)
 
   if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex])
   if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex])
 })
+
 
 function playNote(key) {
   const noteAudio = document.getElementById(key.dataset.note)
@@ -33,40 +36,17 @@ function playNote(key) {
 }
 
 
-
-
-
-function displayNoteLetter () {
-  document.getElementById("demo").innerHTML = note;
-}
-
-
-
 // print note on the screen
 
 $(document).ready(function() {
 
-var noteC = "C"
-var noteDb = "Db"
-var noteD = "D"
-var noteEb = "Eb"
-var noteE = "E"
-var noteF = "F"
-var noteGb = "Gb"
-var noteG = "G"
-var noteAb = "Ab"
-var noteA = "A"
-var noteBb = "Bb"
-var noteB = "B"
-var noteC = "C"
-
   $("#note-c").on("click", function() {
-    var noteC = $("#demo").text("C");
+    $("#demo").text("C");
   });
 
   // ...
   $("#note-d-flat").on("click", function() {
-    document.getElementById("demo").innerHTML = noteDb;
+    $("#demo").text("Db");
   });
 
   $("#note-d").click(function() {
@@ -111,3 +91,49 @@ var noteC = "C"
   });
 
 });
+
+
+// var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
+// console.log(notesThreeBlindMice[3])
+
+// function songFunction() {
+//       var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
+//       var tmbID = document.getElementById("tbmButton");
+      
+//       document.getElementById("note-c").classList.add('highlightNote');
+
+// // after song is chosen, the first key (e) turns red
+//   document.getElementById("note-" + notesThreeBlindMice[i]).addEventListener("click", function(){ 
+
+// }); 
+
+for (i = 0; i < notesThreeBlindMice.length; i++) {
+    notesThreeBlindMice[i]
+    }
+
+
+function songFunction() {
+
+    var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
+
+    document.getElementById("note-e").classList.remove("white");
+    document.getElementById("note-e").classList.add("highlight");
+
+    $("#note-" + notesThreeBlindMice[1]).click(function () {
+        document.getElementById("note-d").classList.remove("white");
+        document.getElementById("note-d").classList.add("highlight");
+    });
+
+}; 
+
+
+// if player hits red key, then the loop highlights the next note
+
+// if the wrong key is played, the key does not move forward
+
+//     a.addEventListener("click", function () { goToNextQuestion(a.innerText); });
+
+      // for (i = 0; i < notesThreeBlindMice.length; i++) {
+      //   notesThreeBlindMice[i]
+      // }
+
