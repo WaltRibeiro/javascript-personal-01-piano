@@ -78,21 +78,7 @@ function checkPass() {
         window.location.replace("http://linkedin.waltrib.com");
     } else if (promptInput != chosenWord) {
         alert("Incorrect password")
+    } else {
+
     }
 };
-
-
-
-
-
-.piano-wrapper {
-  position: relative;
-  height: 300px;
-  width: 300px;
-}
-
-.piano-wrapper img {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
