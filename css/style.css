@@ -155,7 +155,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 40px;
   color: black;
   margin: auto;
-  display: flex;
+
 }
 
 .btn {
