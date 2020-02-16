@@ -93,49 +93,24 @@ $(document).ready(function() {
 });
 
 
-// var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
-// console.log(notesThreeBlindMice[3])
+var indexOfArray = 0;
+var notesNBC = ["c", "a", "f"];
 
-// function songFunction() {
-//       var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
-//       var tmbID = document.getElementById("tbmButton");
-      
-//       document.getElementById("note-c").classList.add('highlightNote');
+function nbcSong() {
 
-// // after song is chosen, the first key (e) turns red
-//   document.getElementById("note-" + notesThreeBlindMice[i]).addEventListener("click", function(){ 
-
-// }); 
-
-for (i = 0; i < notesThreeBlindMice.length; i++) {
-    notesThreeBlindMice[i]
-    }
-
-
-function songFunction() {
-
-  var notesNBC = [c, a, f];
-    var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
-    var notesFrereJacques = [c, d, e, c, c, d, e, c, e, f, g, e, f, g];
-
-    document.getElementById("note-e").classList.remove("white");
-    document.getElementById("note-e").classList.add("highlight");
-
-    $("#note-" + notesThreeBlindMice[1]).click(function () {
-        document.getElementById("note-d").classList.remove("white");
-        document.getElementById("note-d").classList.add("highlight");
-    });
-
+  var noteDiv = $("#note-" + notesNBC[indexOfArray]);
+  console.log(notesNBC[indexOfArray])
+  
+  noteDiv.addClass("highlight")
 }; 
 
+$(document).on("click", ".highlight", function() {
+  // console.log("working")
+  indexOfArray++
+  nbcSong()
+})
 
-// if player hits red key, then the loop highlights the next note
 
-// if the wrong key is played, the key does not move forward
 
-//     a.addEventListener("click", function () { goToNextQuestion(a.innerText); });
-
-      // for (i = 0; i < notesThreeBlindMice.length; i++) {
-      //   notesThreeBlindMice[i]
-      // }
-
+    // var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
+    // var notesFrereJacques = [c, d, e, c, c, d, e, c, e, f, g, e, f, g];
