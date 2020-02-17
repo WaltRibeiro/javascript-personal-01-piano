@@ -17,16 +17,10 @@
       rel="stylesheet"
       type="text/css"/>
 
-
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
     <link href="css/freelancer.css" rel="stylesheet"/>
 
     <link rel="stylesheet" href="css/style.css">
 
-
-    
   </head>
 
   <body id="page-top">
@@ -40,7 +34,7 @@
       <div class="container">
         <a
         class="navbar-brand js-scroll-trigger"
-        href="http://waltrib.com"
+        href="https://waltribeiro.github.io"
         >
         Walt Ribeiro
         <br>
@@ -81,7 +75,7 @@
             <li class="nav-item mx-0 mx-lg-1">
               <a
               class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-              href="https://waltribeiro.github.io/#work/">
+              href="https://waltribeiro.github.io/#work">
               Work
               </a>
             </li>
@@ -117,7 +111,7 @@
               class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
               onclick="checkPass()"
               href="#"
-              >
+            >
                 <i class="fas fa-key fa-2x mr-0"></i>
               </a>
             </li>
@@ -129,17 +123,39 @@
 
 <!-- Masthead -->
 
-<header class="masthead bg-info text-white text-center" id="contact">
-    
+    <header class="masthead bg-info text-white text-center" id="contact">
+    <div class="container d-flex align-items-center flex-column">
 
+<!-- Masthead Heading -->
+
+    <h2 class="masthead-heading mb-0" style="padding-top:20px">
+
+      <a href="https://github.com/waltribeiro/javascript-personal-02-piano">
+        <span
+        class="badge badge-secondary"
+        style="
+        text-decoration:none;
+        padding-top:20px;
+        padding-right:40px;
+        padding-bottom:20px;
+        padding-left:40px"
+        >
+        Github Repo &nbsp; <i class="fas fa-external-link-alt" style="color:white"></i>
+        
+        </span>
+      </a>
+
+    </h2>
+
+<!-- Masthead Subheading -->
+<!-- <p class="masthead-subheading font-weight-light mb-0">w@waltrib.com &bull; 240-487-9258</p> -->
+
+  </div>
 </header>
 
 <!-- About Section -->
 
-    <section class="page-section bg-info text-white mb-0" id="projects">
-
-
-<!-- About Section Heading -->
+    <section class="page-section bg-secondary text-white mb-0" id="projects">
 
 <!-- Section 1 Content -->
 
@@ -165,13 +181,15 @@
 <div class="container">          
 
   <span>
-    <button id="fjButton" class="btn btn-secondary" onclick="fjSong()">Frere Jacques</button>
-    <button id="nbcButton" class="btn btn-secondary" onclick="nbcSong()">NBC</button>
-    <button id="mlButton" class="btn btn-secondary" onclick="mlSong()">Mary Lamb</button>
+    <span style="color:white;font-weight:400;"></span>    <!-- <button id="fjButton" class="btn btn-primary" onclick="song()">Frere Jacques</button> -->
+    <!-- <button id="nbcButton" class="btn btn-secondary" onclick="song()">NBC</button> -->
+    <button id="mlButton" class="btn btn-primary" onclick="song()">Mary Lamb</button>
 
-    <span id="demo" class="displayMusicNote"></span>
+    You just played: <span id="demo" class="displayMusicNote" style="color:white"></span>
+    
+    <br>
 
-</span>
+  </span>
 
 <br>
 <br>
@@ -179,51 +197,51 @@
           <div class="piano">
             
             <div id="note-c"        data-note="c"      class="key white">
-              <!-- <img src="img/computer-key-z.png" class="mx-auto d-block" style="width:28px;margin-top:330%;display:none;"/> -->
+              <img src="img/computer-key-z.png" class="mx-auto d-block" style="width:28px;margin-top:330%;display:none;"/>
             </div>
             
             <div id="note-d-flat"   data-note="d-flat" class="key black">
-              <!-- <img src="img/computer-key-s.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/> -->
+              <img src="img/computer-key-s.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/>
             </div>
             
             <div id="note-d"        data-note="d"      class="key white">
-              <!-- <img src="img/computer-key-x.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/> -->
+              <img src="img/computer-key-x.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/>
             </div>
             
             <div id="note-e-flat"   data-note="e-flat" class="key black">
-              <!-- <img src="img/computer-key-d.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/> -->
+              <img src="img/computer-key-d.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/>
             </div>
             
             <div id="note-e"        data-note="e"      class="key white">
-              <!-- <img src="img/computer-key-c.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/> -->
+              <img src="img/computer-key-c.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/>
             </div>
             
             <div id="note-f"        data-note="f"      class="key white">
-              <!-- <img src="img/computer-key-v.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/> -->
+              <img src="img/computer-key-v.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/>
             </div>
             
             <div id="note-g-flat"   data-note="g-flat" class="key black">
-              <!-- <img src="img/computer-key-g.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/> -->
+              <img src="img/computer-key-g.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/>
             </div>
             
             <div id="note-g"        data-note="g"      class="key white">
-              <!-- <img src="img/computer-key-b.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/> -->
+              <img src="img/computer-key-b.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/>
             </div>
             
             <div id="note-a-flat"   data-note="a-flat" class="key black">
-              <!-- <img src="img/computer-key-h.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/> -->
+              <img src="img/computer-key-h.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/>
             </div>
             
             <div id="note-a"        data-note="a"      class="key white">
-              <!-- <img src="img/computer-key-n.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/> -->
+              <img src="img/computer-key-n.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/>
             </div>
             
             <div id="note-b-flat"   data-note="b-flat" class="key black">
-              <!-- <img src="img/computer-key-j.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/> -->
+              <img src="img/computer-key-j.png" class="mx-auto d-block" style="width:28px;margin-top:300%"/>
             </div>
             
             <div id="note-b"        data-note="b"      class="key white">
-              <!-- <img src="img/computer-key-m.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/> -->
+              <img src="img/computer-key-m.png" class="mx-auto d-block" style="width:28px;margin-top:330%"/>
             </div>
     
 
@@ -254,7 +272,7 @@
       </div>
 
 
-      </section>
+</section>
 
 
 <!-- Copyright Section -->

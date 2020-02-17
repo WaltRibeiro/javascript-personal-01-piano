@@ -93,24 +93,24 @@ $(document).ready(function() {
 });
 
 
+var notesThreeBlindMice = ["e", "d", "c", "e", "d", "c", "g", "f", "f", "e", "g", "f", "f", "e"];
+var notesFrereJacques = ["c", "d", "e", "c", "c", "d", "e", "c", "e", "f", "g", "e", "f", "g"];
+var notesMaryLamb = ["e", "d", "c", "d", "e", "e", "e", "d", "d", "d", "e", "g", "g"];
+// var notesNBC = ["c", "a", "f"];
 var indexOfArray = 0;
-var notesNBC = ["c", "a", "f"];
 
-function nbcSong() {
-
-  var noteDiv = $("#note-" + notesNBC[indexOfArray]);
-  console.log(notesNBC[indexOfArray])
-  
+function song() {
+  var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
   noteDiv.addClass("highlight")
-}; 
+};
 
 $(document).on("click", ".highlight", function() {
+  $(".highlight").removeClass("highlight");
   // console.log("working")
   indexOfArray++
-  nbcSong()
-})
+  song()
+});
 
+//   var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+//   var noteDiv = $("#note-" + getElementById("#MaryLamb") + [indexOfArray]);
 
-
-    // var notesThreeBlindMice = [e, d, c, e, d, c, g, f, f, e, g, f, f, e];
-    // var notesFrereJacques = [c, d, e, c, c, d, e, c, e, f, g, e, f, g];
