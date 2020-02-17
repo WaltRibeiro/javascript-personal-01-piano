@@ -201,15 +201,9 @@ img {
 
 
 
-@media (max-width:1040px){
-  img {
-    display: none;
+@media screen and (max-width: 620px) {
+  .hideImage {
+    visibility: hidden;
+    /* opacity: 0; */
+  }
 }
-}
-
-
-
-
-
-
-
