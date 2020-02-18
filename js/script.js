@@ -96,11 +96,22 @@ $(document).ready(function() {
 var notesThreeBlindMice = ["e", "d", "c", "e", "d", "c", "g", "f", "f", "e", "g", "f", "f", "e"];
 var notesFrereJacques = ["c", "d", "e", "c", "c", "d", "e", "c", "e", "f", "g", "e", "f", "g"];
 var notesMaryLamb = ["e", "d", "c", "d", "e", "e", "e", "d", "d", "d", "e", "g", "g", "e", "d", "c", "d", "e", "e", "e", "e", "d", "d", "e", "d", "c", "c"];
-// var notesNBC = ["c", "a", "f"];
+var notesNBC = ["c", "a", "f"];
 var indexOfArray = 0;
 
+var theSong = "";
+
 function song() {
-  var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+  var noteDiv;
+  if(theSong === "mary"){
+    noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+  }
+  else if (theSong === "fj") {
+    noteDiv = $("#note-" + notesFrereJacques[indexOfArray]);
+  } else if (theSong === "nbc") {
+    noteDiv = $("#note-" + notesNBC[indexOfArray]);
+  }
+  // var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
   noteDiv.addClass("highlight")
 };
 
@@ -110,6 +121,14 @@ $(document).on("click", ".highlight", function() {
   indexOfArray++
   song()
 });
+
+
+function songSetup(theSongButton){
+    theSong = theSongButton;
+    indexOfArray = 0;
+    $(".highlight").removeClass("highlight");
+    song();
+}
 
 //   var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
 //   var noteDiv = $("#note-" + getElementById("#MaryLamb") + [indexOfArray]);
