@@ -95,7 +95,7 @@ $(document).ready(function() {
 
 var notesThreeBlindMice = ["e", "d", "c", "e", "d", "c", "g", "f", "f", "e", "g", "f", "f", "e"];
 var notesFrereJacques = ["c", "d", "e", "c", "c", "d", "e", "c", "e", "f", "g", "e", "f", "g"];
-var notesMaryLamb = ["e", "d", "c", "d", "e", "e", "e", "d", "d", "d", "e", "g", "g"];
+var notesMaryLamb = ["e", "d", "c", "d", "e", "e", "e", "d", "d", "d", "e", "g", "g", "e", "d", "c", "d", "e", "e", "e", "e", "d", "d", "e", "d", "c", "c"];
 // var notesNBC = ["c", "a", "f"];
 var indexOfArray = 0;
 
