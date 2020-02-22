@@ -41,53 +41,53 @@ function playNote(key) {
 $(document).ready(function() {
 
   $("#note-c").on("click", function() {
-    $("#demo").text("C");
+    $("#demo").text("C note");
   });
 
   // ...
   $("#note-d-flat").on("click", function() {
-    $("#demo").text("Db");
+    $("#demo").text("Db note");
   });
 
   $("#note-d").click(function() {
-    $("#demo").text("D");
+    $("#demo").text("D note");
   });
 
   $("#note-e-flat").click(function() {
-    $("#demo").text("Eb");
+    $("#demo").text("Eb note");
   });
   
   $("#note-e").click(function() {
-    $("#demo").text("E");
+    $("#demo").text("E note");
   });
 
   $("#note-f").click(function() {
-    $("#demo").text("F");
+    $("#demo").text("F note");
   });
 
   $("#note-g-flat").click(function() {
-    $("#demo").text("Gb");
+    $("#demo").text("Gb note");
   });
 
   $("#note-g").click(function() {
-    $("#demo").text("G");
+    $("#demo").text("G note");
   });
 
   $("#note-a-flat").click(function() {
-    $("#demo").text("Ab");
+    $("#demo").text("Ab note");
   });
 
 
   $("#note-a").click(function() {
-    $("#demo").text("A");
+    $("#demo").text("A note");
   });
 
   $("#note-b-flat").click(function() {
-    $("#demo").text("Bb");
+    $("#demo").text("Bb note");
   });
 
   $("#note-b").click(function() {
-    $("#demo").text("B");
+    $("#demo").text("B note");
   });
 
 });
@@ -154,6 +154,6 @@ function checkPass() {
 };
 
 $("li").on("click", function() {
-  $("li").removeClass("active");
-  $(this).addClass("active");
+  $("li").removeClass("active font-weight-bold");
+  $(this).addClass("active font-weight-bold");
 });

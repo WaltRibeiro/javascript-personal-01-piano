@@ -5113,12 +5113,12 @@ a.badge-dark:focus, a.badge-dark.focus {
   pointer-events: none;
   background-color: #fff;
 }
-
+/* walt this is the original color = #bca41a */
 .list-group-item.active {
   z-index: 2;
-  color: #fff;
-  background-color: #1abc9c;
-  border-color: #1abc9c;
+  color: white;
+  background-color:  rgb(228, 115, 115);
+  border-color: rgb(228, 115, 115);
 }
 
 .list-group-horizontal {
