@@ -120,10 +120,15 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 .displayMusicNote {
-  font-size: 40px;
+  font-size: 30px;
+  color: black;
+  margin-left: 20px;
+}
+
+.displayMusicNoteAfter {
+  font-size: 30px;
   color: black;
   margin: auto;
-
 }
 
 .piano {
