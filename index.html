@@ -180,11 +180,13 @@
 
 
 
-<div class="d-inline-block">
-  <button id="fjButton" style="width:120px" class="btn btn-danger" onclick="songSetup('fj')">Frere<br>Jacques</button>
-  <button id="nbcButton" style="width:120px" class="btn btn-danger" onclick="songSetup('nbc')">NBC</button>
-  <button id="mlButton" style="width:120px" class="btn btn-danger text-white" onclick="songSetup('mary')">Mary Had A<br>Little Lamb</button>
-</div>
+<ul class="list-group w-50">
+  <li id="bmButton" onclick="songSetup('bm')" class="list-group-item text-dark">Bruno Mars</li>
+  <li id="fjButton" onclick="songSetup('fj')" class="list-group-item text-dark">Frere Jacques</li>
+  <li id="nbcButton" onclick="songSetup('nbc')" class="list-group-item text-dark">NBC</li>
+  <li id="mlButton" onclick="songSetup('mary')" class="list-group-item text-dark active">Mary Had A Little Lamb</li>
+</ul>
+
 
 <div class="d-inline-block">
   You played:

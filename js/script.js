@@ -24,7 +24,7 @@ document.addEventListener('keydown', event => {
   if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex])
 })
 
-
+// this may be the set timeout for add event listener
 function playNote(key) {
   const noteAudio = document.getElementById(key.dataset.note)
   noteAudio.currentTime = 0
@@ -97,6 +97,7 @@ var notesThreeBlindMice = ["e", "d", "c", "e", "d", "c", "g", "f", "f", "e", "g"
 var notesFrereJacques = ["c", "d", "e", "c", "c", "d", "e", "c", "e", "f", "g", "e", "f", "g"];
 var notesMaryLamb = ["e", "d", "c", "d", "e", "e", "e", "d", "d", "d", "e", "g", "g", "e", "d", "c", "d", "e", "e", "e", "e", "d", "d", "e", "d", "c", "c"];
 var notesNBC = ["c", "a", "f"];
+var notesBrunoMars = ["a", "f", "g", "d", "c", "b", "g", "e", "c", "a", "c"]
 var indexOfArray = 0;
 
 var theSong = "";
@@ -105,12 +106,14 @@ function song() {
   var noteDiv;
   if(theSong === "mary"){
     noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
-  }
-  else if (theSong === "fj") {
+  } else if (theSong === "fj") {
     noteDiv = $("#note-" + notesFrereJacques[indexOfArray]);
   } else if (theSong === "nbc") {
     noteDiv = $("#note-" + notesNBC[indexOfArray]);
+  } else if (theSong === "bm") {
+    noteDiv = $("#note-" + notesBrunoMars[indexOfArray]);
   }
+  
   // var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
   noteDiv.addClass("highlight")
 };
@@ -149,3 +152,8 @@ function checkPass() {
 
     }
 };
+
+$("li").on("click", function() {
+  $("li").removeClass("active");
+  $(this).addClass("active");
+});
