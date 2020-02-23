@@ -1,7 +1,0 @@
-node_modules
-*.pxm
-*.mp4
-.*
-.DS_Store
-.travis.yml
-.browserslistrc
