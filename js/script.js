@@ -114,16 +114,38 @@ function song() {
     noteDiv = $("#note-" + notesBrunoMars[indexOfArray]);
   }
   
-  // var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+// var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
   noteDiv.addClass("highlight")
 };
 
-$(document).on("click", ".highlight", function() {
-  $(".highlight").removeClass("highlight");
+// highlight of the piano
+// $(document).on("click", ".highlight", function() {
+function listClick() {
+
+// create function that figures out which song the user chose
+// then run another function that can check to see if the click exists inside the array of notes
+// then call another function and compare to se if the user clicked on exists inside the array of the song
+// if it exists then you can highlight whatever note. If it does NOT exist then the indexOfArray does not move forward
+// first do it with the keyboard. Then go back and add the keyUp mouse listener
+
+  if (document.addEventListener('keyup', logKey) == document.getElementsByClassName('.list-group')) {
+
+    console.log(theSong)
+
+    // console.log (event.key)
+if (theSong === "nbc") {
+var nbcCheck = notesNBC.indexOf(notesNBC[indexOfArray])
+console.log(nbcCheck)
+}
+//  event.key === theSong #[x]")
+    $(".highlight").removeClass("highlight");
   // console.log("working")
   indexOfArray++
   song()
-});
+}}
+
+document.addEventListener('keyup', logKey);
+var keyboardPressDown = $(document).on('click', logKey);
 
 
 function songSetup(theSongButton){
