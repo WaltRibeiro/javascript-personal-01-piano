@@ -93,62 +93,44 @@ $(document).ready(function() {
 });
 
 
-var notesThreeBlindMice = ["e", "d", "c", "e", "d", "c", "g", "f", "f", "e", "g", "f", "f", "e"];
-var notesFrereJacques = ["c", "d", "e", "c", "c", "d", "e", "c", "e", "f", "g", "e", "f", "g"];
+
 var notesMaryLamb = ["e", "d", "c", "d", "e", "e", "e", "d", "d", "d", "e", "g", "g", "e", "d", "c", "d", "e", "e", "e", "e", "d", "d", "e", "d", "c", "c"];
+var notesFrereJacques = ["c", "d", "e", "c", "c", "d", "e", "c", "e", "f", "g", "e", "f", "g"];
 var notesNBC = ["c", "a", "f"];
 var notesBrunoMars = ["a", "f", "g", "d", "c", "b", "g", "e", "c", "a", "c"]
+var notesThreeBlindMice = ["e", "d", "c", "e", "d", "c", "g", "f", "e", "g", "f", "e", "d", "c"];
 var indexOfArray = 0;
 
 var theSong = "";
 
 function song() {
   var noteDiv;
-  if(theSong === "mary"){
+  if(theSong === "maryHadALittleLamb") {
     noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
-  } else if (theSong === "fj") {
+  } else if (theSong === "frereJacques") {
     noteDiv = $("#note-" + notesFrereJacques[indexOfArray]);
-  } else if (theSong === "nbc") {
+  } else if (theSong === "nbcLogo") {
     noteDiv = $("#note-" + notesNBC[indexOfArray]);
-  } else if (theSong === "bm") {
+  } else if (theSong === "brunoMarsUptownFunk") {
     noteDiv = $("#note-" + notesBrunoMars[indexOfArray]);
+  } else if (theSong === "threeBlindMice") {
+    noteDiv = $("#note-" + notesThreeBlindMice[indexOfArray]);
   }
   
-// var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+  // var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
   noteDiv.addClass("highlight")
 };
 
-// highlight of the piano
-// $(document).on("click", ".highlight", function() {
-function listClick() {
-
-// create function that figures out which song the user chose
-// then run another function that can check to see if the click exists inside the array of notes
-// then call another function and compare to se if the user clicked on exists inside the array of the song
-// if it exists then you can highlight whatever note. If it does NOT exist then the indexOfArray does not move forward
-// first do it with the keyboard. Then go back and add the keyUp mouse listener
-
-  if (document.addEventListener('keyup', logKey) == document.getElementsByClassName('.list-group')) {
-
-    console.log(theSong)
-
-    // console.log (event.key)
-if (theSong === "nbc") {
-var nbcCheck = notesNBC.indexOf(notesNBC[indexOfArray])
-console.log(nbcCheck)
-}
-//  event.key === theSong #[x]")
-    $(".highlight").removeClass("highlight");
+$(document).on("click", ".highlight", function() {
+  $(".highlight").removeClass("highlight");
   // console.log("working")
   indexOfArray++
   song()
-}}
+});
 
-document.addEventListener('keyup', logKey);
-var keyboardPressDown = $(document).on('click', logKey);
+console.log("----->", notesBrunoMars[notesBrunoMars.length - 1])
 
-
-function songSetup(theSongButton){
+function songSetup(theSongButton) {
     theSong = theSongButton;
     indexOfArray = 0;
     $(".highlight").removeClass("highlight");
