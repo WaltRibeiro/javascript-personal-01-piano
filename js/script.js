@@ -243,8 +243,33 @@ WebMidi.enable(function (err) {
 
   $("#demo").text(event.note.name + " note");
 
-
-  playNote(blackKeys[0]) // document.querySelectorAll('.key.black')[0]
+  if ((event.note.name + "-" + event.note.octave).toLowerCase() === "c-3") {
+  playNote(whiteKeys[0])
+  } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "c#-3") {
+    playNote(blackKeys[0])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "d-3") {
+    playNote(whiteKeys[1])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "d#-3") {
+    playNote(blackKeys[1])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "e-3") {
+    playNote(whiteKeys[2])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "f-3") {
+    playNote(whiteKeys[3])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "f#-3") {
+    playNote(blackKeys[2])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "g-3") {
+    playNote(whiteKeys[4])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "g#-3") {
+    playNote(blackKeys[3])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "a-3") {
+    playNote(whiteKeys[5])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "a#-3") {
+    playNote(blackKeys[4])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "b-3") {
+    playNote(whiteKeys[6])
+    } else if ((event.note.name + "-" + event.note.octave).toLowerCase() === "c-4") {
+    playNote(whiteKeys[7])
+    }
 
 
 
