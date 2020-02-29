@@ -1,3 +1,36 @@
+/*
+z  s  x  d  c  v  g  b  h  n  j  m
+90 83 88 68 67 86 71 66 72 78 74 77
+C  Db D  Eb E  F  Gb G  Ab A  Bb B  
+a	65
+b	66
+c	67
+d	68
+e	69
+f	70
+g	71
+h	72
+i	73
+j	74
+k	75
+l	76
+m	77
+n	78
+o	79
+p	80
+q	81
+r	82
+s	83
+t	84
+u	85
+v	86
+w	87
+x	88
+y	89
+z	90
+*/
+
+
 const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
 const BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
 
@@ -40,57 +73,101 @@ function playNote(key) {
 
 $(document).ready(function() {
 
+  // C note
   $("#note-c").on("click", function() {
     $("#demo").text("C note");
   });
 
-  // ...
+  // Db note
   $("#note-d-flat").on("click", function() {
     $("#demo").text("Db note");
   });
 
+  // D note
   $("#note-d").click(function() {
     $("#demo").text("D note");
   });
 
+  // Eb note
   $("#note-e-flat").click(function() {
     $("#demo").text("Eb note");
   });
-  
+
+  // E note
   $("#note-e").click(function() {
     $("#demo").text("E note");
   });
 
+  // F note
   $("#note-f").click(function() {
     $("#demo").text("F note");
   });
 
+  // Gb note
   $("#note-g-flat").click(function() {
     $("#demo").text("Gb note");
   });
 
+  // G note
   $("#note-g").click(function() {
     $("#demo").text("G note");
   });
 
+  // Ab note
   $("#note-a-flat").click(function() {
     $("#demo").text("Ab note");
   });
 
-
+  // A note
   $("#note-a").click(function() {
     $("#demo").text("A note");
   });
 
+  // Bb note
   $("#note-b-flat").click(function() {
     $("#demo").text("Bb note");
   });
 
+  // B note
   $("#note-b").click(function() {
     $("#demo").text("B note");
   });
 
-});
+
+  
+  document.addEventListener("keydown", checkKeyPressed, false);
+
+  function checkKeyPressed(event) {
+    // C note
+    if (event.keyCode === 90) {
+      $("#demo").text("C note");
+    } else if (event.keyCode === 83) {
+        $("#demo").text("Db note");
+    } else if (event.keyCode === 88) {
+      $("#demo").text("D note");
+    } else if (event.keyCode === 68) {
+      $("#demo").text("Eb note");
+    } else if (event.keyCode === 67) {
+      $("#demo").text("E note");
+    } else if (event.keyCode === 86) {
+      $("#demo").text("F note");
+    } else if (event.keyCode === 71) {
+      $("#demo").text("Gb note");
+    } else if (event.keyCode === 66) {
+      $("#demo").text("G note");
+    } else if (event.keyCode === 72) {
+      $("#demo").text("Ab note");
+    } else if (event.keyCode === 78) {
+      $("#demo").text("A note");
+    } else if (event.keyCode === 74) {
+      $("#demo").text("Bb note");
+    } else if (event.keyCode === 77) {
+      $("#demo").text("B note");
+    };
+
+    
+
+}});
 
 
 
@@ -160,4 +237,30 @@ function checkPass() {
 $("li").on("click", function() {
   $("li").removeClass("active font-weight-bold");
   $(this).addClass("active font-weight-bold");
+});
+
+// web midi
+
+WebMidi.enable(function (err) {
+
+  if (err) {
+    console.log("WebMidi could not be enabled.", err);
+  } else {
+    console.log("WebMidi enabled!");
+  }
+  
+});
+
+
+
+
+WebMidi.enable(function (err) {
+  console.log(WebMidi.inputs);
+  console.log(WebMidi.outputs);
+});
+
+var input = WebMidi.getInputByName("iRig Keys");
+
+input.addListener('pitchbend', "all", function(e) {
+    console.log("Pitch value: " + e.value);
 });
