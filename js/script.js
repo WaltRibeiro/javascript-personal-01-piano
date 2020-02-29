@@ -1,37 +1,5 @@
-/*
-z  s  x  d  c  v  g  b  h  n  j  m
-90 83 88 68 67 86 71 66 72 78 74 77
-C  Db D  Eb E  F  Gb G  Ab A  Bb B  
-a	65
-b	66
-c	67
-d	68
-e	69
-f	70
-g	71
-h	72
-i	73
-j	74
-k	75
-l	76
-m	77
-n	78
-o	79
-p	80
-q	81
-r	82
-s	83
-t	84
-u	85
-v	86
-w	87
-x	88
-y	89
-z	90
-*/
 
-
-const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm']
+const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',']
 const BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
 
 const keys = document.querySelectorAll('.key') // array of divs with class query
@@ -46,7 +14,6 @@ keys.forEach(key => {
 })
 
 // key press down plays the note
-
 document.addEventListener('keydown', event => {
   if (event.repeat) return
   const key = event.key
@@ -70,68 +37,72 @@ function playNote(key) {
 
 
 // print note on the screen
-
 $(document).ready(function() {
 
-  // C note
-  $("#note-c").on("click", function() {
+  // C-3 note
+  $("#note-c-3").on("click", function() {
     $("#demo").text("C note");
   });
 
-  // Db note
-  $("#note-d-flat").on("click", function() {
+  // Db-3 note
+  $("#note-d-flat-3").on("click", function() {
     $("#demo").text("Db note");
   });
 
-  // D note
-  $("#note-d").click(function() {
+  // D-3 note
+  $("#note-d-3").click(function() {
     $("#demo").text("D note");
   });
 
-  // Eb note
-  $("#note-e-flat").click(function() {
+  // Eb-3 note
+  $("#note-e-flat-3").click(function() {
     $("#demo").text("Eb note");
   });
 
-  // E note
-  $("#note-e").click(function() {
+  // E-3 note
+  $("#note-e-3").click(function() {
     $("#demo").text("E note");
   });
 
-  // F note
-  $("#note-f").click(function() {
+  // F-3 note
+  $("#note-f-3").click(function() {
     $("#demo").text("F note");
   });
 
-  // Gb note
-  $("#note-g-flat").click(function() {
+  // Gb-3 note
+  $("#note-g-flat-3").click(function() {
     $("#demo").text("Gb note");
   });
 
-  // G note
-  $("#note-g").click(function() {
+  // G-3 note
+  $("#note-g-3").click(function() {
     $("#demo").text("G note");
   });
 
-  // Ab note
-  $("#note-a-flat").click(function() {
+  // Ab-3 note
+  $("#note-a-flat-3").click(function() {
     $("#demo").text("Ab note");
   });
 
-  // A note
-  $("#note-a").click(function() {
+  // A-3 note
+  $("#note-a-3").click(function() {
     $("#demo").text("A note");
   });
 
-  // Bb note
-  $("#note-b-flat").click(function() {
+  // Bb-3 note
+  $("#note-b-flat-3").click(function() {
     $("#demo").text("Bb note");
   });
 
-  // B note
-  $("#note-b").click(function() {
+  // B-3 note
+  $("#note-b-3").click(function() {
     $("#demo").text("B note");
   });
+
+    // C-4 note
+    $("#note-c-4").click(function() {
+      $("#demo").text("C note");
+    });
 
 
   
@@ -141,6 +112,10 @@ $(document).ready(function() {
     // C note
     if (event.keyCode === 90) {
       $("#demo").text("C note");
+      theSong = theSongButton;
+      indexOfArray = 0;
+      $(".highlight").removeClass("highlight");
+      song();
     } else if (event.keyCode === 83) {
         $("#demo").text("Db note");
     } else if (event.keyCode === 88) {
@@ -163,19 +138,18 @@ $(document).ready(function() {
       $("#demo").text("Bb note");
     } else if (event.keyCode === 77) {
       $("#demo").text("B note");
+    } else if (event.keyCode === 188) {
+      $("#demo").text("C note");
     };
-
-    
-
-}});
+  }
+});
 
 
-
-var notesMaryLamb = ["e", "d", "c", "d", "e", "e", "e", "d", "d", "d", "e", "g", "g", "e", "d", "c", "d", "e", "e", "e", "e", "d", "d", "e", "d", "c", "c"];
-var notesFrereJacques = ["c", "d", "e", "c", "c", "d", "e", "c", "e", "f", "g", "e", "f", "g"];
-var notesNBC = ["c", "a", "f"];
-var notesBrunoMars = ["a", "f", "g", "d", "c", "b", "g", "e", "c", "a", "c"]
-var notesThreeBlindMice = ["e", "d", "c", "e", "d", "c", "g", "f", "e", "g", "f", "e", "d", "c"];
+var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];
+var notesFrereJacques   = ["c-3", "d-3", "e-3", "c-3", "c-3", "d-3", "e-3", "c-3", "e-3", "f-3", "g-3", "e-3", "f-3", "g-3"];
+var notesNBC            = ["c-3", "a-3", "f-3"];
+var notesBrunoMars      = ["a-3", "f-3", "g-3", "d-3", "c-3", "b-3", "g-3", "e-3", "c-3", "a-3", "c-3"]
+var notesThreeBlindMice = ["e-3", "d-3", "c-3", "e-3", "d-3", "c-3", "g-3", "f-3", "e-3", "g-3", "f-3", "e-3", "d-3", "c-3"];
 var indexOfArray = 0;
 
 var theSong = "";
@@ -204,6 +178,13 @@ $(document).on("click", ".highlight", function() {
   indexOfArray++
   song()
 });
+
+// $(document).on("keypress", ".highlight", function() {
+//   $(".highlight").removeClass("highlight");
+//   // console.log("working")
+//   indexOfArray++
+//   song()
+// });
 
 console.log("----->", notesBrunoMars[notesBrunoMars.length - 1])
 
@@ -239,8 +220,8 @@ $("li").on("click", function() {
   $(this).addClass("active font-weight-bold");
 });
 
-// web midi
 
+// web midi
 WebMidi.enable(function (err) {
 
   if (err) {
