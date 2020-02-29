@@ -1,6 +1,7 @@
 
-const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',']
 const BLACK_KEYS = ['s', 'd', 'g', 'h', 'j']
+const WHITE_KEYS = ['z', 'x', 'c', 'v', 'b', 'n', 'm', ',']
+
 
 const keys = document.querySelectorAll('.key') // array of divs with class query
 const whiteKeys = document.querySelectorAll('.key.white')
@@ -16,17 +17,21 @@ keys.forEach(key => {
 // key press down plays the note
 document.addEventListener('keydown', event => {
   if (event.repeat) return
+console.log(event.key) // return "s"
   const key = event.key
+  const blackKeyIndex = BLACK_KEYS.indexOf(key) // "s" becomes "[0]"
   const whiteKeyIndex = WHITE_KEYS.indexOf(key)
-  const blackKeyIndex = BLACK_KEYS.indexOf(key)
 
+
+  if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex]) // document.querySelectorAll('.key.black')[0]
   if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex])
-  if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex])
+
 })
 
-// this may be the set timeout for add event listener
+// the set timeout might go here
 function playNote(key) {
   const noteAudio = document.getElementById(key.dataset.note)
+
   noteAudio.currentTime = 0
   noteAudio.play()
   key.classList.add('active')
@@ -237,28 +242,20 @@ WebMidi.enable(function (err) {
   console.log((event.note.name + "-" + event.note.octave).toLowerCase());
 
   $("#demo").text(event.note.name + " note");
-  
-}
+
+
+  playNote(blackKeys[0]) // document.querySelectorAll('.key.black')[0]
 
 
 
 
-);
+
+
+
+  });
 
   }
-  
+
 });
 
 
-
-
-// WebMidi.enable(function (err) {
-//   console.log(WebMidi.inputs);
-//   console.log(WebMidi.outputs);
-// });
-
-// var input = WebMidi.getInputByName("iRig Keys");
-
-// input.addListener('pitchbend', "all", function(event) {
-//     console.log("Pitch value: " + event.value);
-// });
