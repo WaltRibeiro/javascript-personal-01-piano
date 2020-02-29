@@ -228,6 +228,23 @@ WebMidi.enable(function (err) {
     console.log("WebMidi could not be enabled.", err);
   } else {
     console.log("WebMidi enabled!");
+
+  var input = WebMidi.getInputByName("iRig Keys");
+
+  input.addListener('noteon', "all",
+  
+  function (event) {
+  console.log((event.note.name + "-" + event.note.octave).toLowerCase());
+
+  $("#demo").text(event.note.name + " note");
+  
+}
+
+
+
+
+);
+
   }
   
 });
@@ -235,13 +252,13 @@ WebMidi.enable(function (err) {
 
 
 
-WebMidi.enable(function (err) {
-  console.log(WebMidi.inputs);
-  console.log(WebMidi.outputs);
-});
+// WebMidi.enable(function (err) {
+//   console.log(WebMidi.inputs);
+//   console.log(WebMidi.outputs);
+// });
 
-var input = WebMidi.getInputByName("iRig Keys");
+// var input = WebMidi.getInputByName("iRig Keys");
 
-input.addListener('pitchbend', "all", function(e) {
-    console.log("Pitch value: " + e.value);
-});
+// input.addListener('pitchbend', "all", function(event) {
+//     console.log("Pitch value: " + event.value);
+// });
