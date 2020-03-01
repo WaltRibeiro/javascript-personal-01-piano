@@ -234,7 +234,7 @@ WebMidi.enable(function (err) {
   } else {
     console.log("WebMidi enabled!");
 
-  var input = WebMidi.getInputByName("iRig Keys");
+  input = WebMidi.inputs[0];
 
   input.addListener('noteon', "all",
   
