@@ -104,19 +104,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 
+.modal-backdrop {
+    opacity:0.2 !important;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
+#exa.mpleModal {
+  top:5%;
+  right:50%;
+  outline: none;
+}
 
 
 .displayMusicNote {
