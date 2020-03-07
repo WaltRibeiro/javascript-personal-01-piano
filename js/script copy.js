@@ -104,10 +104,10 @@ $(document).ready(function() {
     $("#demo").text("B note");
   });
 
-  // C-4 note
-  $("#note-c-4").click(function() {
-    $("#demo").text("C note");
-  });
+    // C-4 note
+    $("#note-c-4").click(function() {
+      $("#demo").text("C note");
+    });
 
 
   
@@ -159,11 +159,9 @@ var indexOfArray = 0;
 
 var theSong = "";
 
-function songSetup(theSong) {
-
+function song() {
   var noteDiv;
-
-  if (theSong === "maryHadALittleLamb") {
+  if(theSong === "maryHadALittleLamb") {
     noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
   } else if (theSong === "frereJacques") {
     noteDiv = $("#note-" + notesFrereJacques[indexOfArray]);
@@ -175,52 +173,59 @@ function songSetup(theSong) {
     noteDiv = $("#note-" + notesThreeBlindMice[indexOfArray]);
   }
   
-  // var noteDiv = $("#note-" + theSong[indexOfArray]);
-  noteDiv.addClass("highlight");
-
-  $(document).on("click", ".highlight", function() {
-    $(".highlight").removeClass("highlight");
-    // console.log("working")
-
-    indexOfArray++
-
-    $("#note-" + notesThreeBlindMice[indexOfArray]).addClass("highlight");
-    songSetup()
-  });
-
+  // var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+  noteDiv.addClass("highlight")
 };
 
+$(document).on("click", ".highlight", function() {
+  $(".highlight").removeClass("highlight");
+  // console.log("working")
+  indexOfArray++
+  song()
+});
 
-
-// $("li").on("click", function() {
-//   $("li").removeClass("active font-weight-bold");
-//   $(this).addClass("active font-weight-bold");
+// $(document).on("keypress", ".highlight", function() {
+//   $(".highlight").removeClass("highlight");
+//   // console.log("working")
+//   indexOfArray++
+//   song()
 // });
 
+console.log("----->", notesBrunoMars[notesBrunoMars.length - 1])
 
-
+function songSetup(theSongButton) {
+    theSong = theSongButton;
+    indexOfArray = 0;
+    $(".highlight").removeClass("highlight");
+    song();
+}
 
 function songWatch() {
-  var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];
-  var index = 0;
+  // var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];
 
-  setInterval(function() {
-    if (index < notesMaryLamb.length -1) {
+
+  for (i = 0; i < notesMaryLamb.length; i++) {
     $(".highlight").removeClass("highlight");
-    console.log(notesMaryLamb[index++ % notesMaryLamb.length]);
-    var element = document.getElementById("note-" + notesMaryLamb[index++ % notesMaryLamb.length]);
-        element.classList.add("highlight");
-      }
-  }, 250)
+    var element = document.getElementById("note-" + notesMaryLamb[i]);
+    element.classList.add("highlight");
 
+    setTimeout(songWatch, 1000);
+  }
 };
 
 
+
+
+
+
+//   var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+//   var noteDiv = $("#note-" + getElementById("#MaryLamb") + [indexOfArray]);
 
 
 
 // Password checker for private work
 var chosenWord = "art";
+
 
 function checkPass() {
     var promptInput = prompt("Please enter the password to see more work");
@@ -233,6 +238,10 @@ function checkPass() {
     }
 };
 
+$("li").on("click", function() {
+  $("li").removeClass("active font-weight-bold");
+  $(this).addClass("active font-weight-bold");
+});
 
 
 // web midi
@@ -291,3 +300,4 @@ WebMidi.enable(function (err) {
   }
 
 });
+
