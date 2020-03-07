@@ -193,12 +193,31 @@ $(document).on("click", ".highlight", function() {
 
 console.log("----->", notesBrunoMars[notesBrunoMars.length - 1])
 
-function songSetup(theSongButton) {
-    theSong = theSongButton;
-    indexOfArray = 0;
-    $(".highlight").removeClass("highlight");
-    song();
-}
+function songWatch() {
+var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];
+var index = 0;
+setInterval(function() {
+  $(".highlight").removeClass("highlight");
+  console.log(notesMaryLamb[index++ % notesMaryLamb.length]);
+  var element = document.getElementById("note-" + notesMaryLamb[index++ % notesMaryLamb.length]);
+      element.classList.add("highlight");
+}, 100)
+};
+// function songWatch() {
+//   var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];
+//   for (i = 0; i < notesMaryLamb.length; i++) {
+//     $(".highlight").removeClass("highlight");
+//     var element = document.getElementById("note-" + notesMaryLamb[i]);
+//     element.classList.add("highlight");
+
+//     setTimeout(songWatch, 1000);
+//   }
+// };
+
+
+
+
+
 
 //   var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
 //   var noteDiv = $("#note-" + getElementById("#MaryLamb") + [indexOfArray]);
@@ -282,5 +301,4 @@ WebMidi.enable(function (err) {
   }
 
 });
-
 

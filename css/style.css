@@ -169,6 +169,12 @@ img {
   width: 450px;
 }
 
+.v-align {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 @media only screen and (max-width:768px) {
 
   .white {

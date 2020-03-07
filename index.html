@@ -8,6 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="data:;base64,=">
     <title>Walt Ribeiro's Resume</title>
 
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
@@ -288,16 +289,21 @@
         
       </div>
 
-
+      <button id="songWatch" type="button" onclick="songWatch()" class="btn btn-primary btn-sm float-right" style="width:60px">Watch</button>
 
       <div class="col-sm-6 right" style="margin-top:20px">
 
         <ul class="list-group mr-5">
-          <li id="mlButton" onclick="songSetup('maryHadALittleLamb')" class="list-group-item text-dark">Mary Had A Little Lamb</li>
+          <li class="list-group-item text-dark">
+            <button type="button" class="btn btn-default btn-sm float-left">Mary Had A Little Lamb</button>
+            <button id="mlButtonLearn" type="button" onclick="songSetup('maryHadALittleLambLearn')" class="btn btn-primary btn-sm float-right" style="width:60px">Learn</button>
+            <button id="mlButtonWatch" type="button" onclick="songWatch('maryHadALittleLambWatch')" class="btn btn-primary btn-sm float-right" style="width:60px">Watch</button>
+          </li>
+
           <li id="fjButton" onclick="songSetup('frereJacques')" class="list-group-item text-dark">Frere Jacques</li>
           <li id="nbcButton" onclick="songSetup('nbcLogo')" class="list-group-item text-dark">NBC Logo</li>
           <li id="bmButton" onclick="songSetup('brunoMarsUptownFunk')" class="list-group-item text-dark">Bruno Mars "Uptown Funk"</li>
-          <li id="bmButton" onclick="songSetup('threeBlindMice')" class="list-group-item text-dark">Three Blind Mice</li>
+          <li id="tbmButton" onclick="songSetup('threeBlindMice')" class="list-group-item text-dark">Three Blind Mice</li>
         </ul>
 
       </div>
