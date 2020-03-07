@@ -104,10 +104,10 @@ $(document).ready(function() {
     $("#demo").text("B note");
   });
 
-    // C-4 note
-    $("#note-c-4").click(function() {
-      $("#demo").text("C note");
-    });
+  // C-4 note
+  $("#note-c-4").click(function() {
+    $("#demo").text("C note");
+  });
 
 
   
@@ -159,7 +159,7 @@ var indexOfArray = 0;
 
 var theSong = "";
 
-function song() {
+function songSetup() {
   var noteDiv;
   if(theSong === "maryHadALittleLamb") {
     noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
@@ -173,8 +173,8 @@ function song() {
     noteDiv = $("#note-" + notesThreeBlindMice[indexOfArray]);
   }
   
-  // var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
-  noteDiv.addClass("highlight")
+  var noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
+  noteDiv.addClass("highlight");
 };
 
 $(document).on("click", ".highlight", function() {
@@ -184,25 +184,25 @@ $(document).on("click", ".highlight", function() {
   song()
 });
 
-// $(document).on("keypress", ".highlight", function() {
-//   $(".highlight").removeClass("highlight");
-//   // console.log("working")
-//   indexOfArray++
-//   song()
-// });
+
 
 console.log("----->", notesBrunoMars[notesBrunoMars.length - 1])
 
 function songWatch() {
 var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];
 var index = 0;
+
 setInterval(function() {
+  if (index < notesMaryLamb.length -1) {
   $(".highlight").removeClass("highlight");
   console.log(notesMaryLamb[index++ % notesMaryLamb.length]);
   var element = document.getElementById("note-" + notesMaryLamb[index++ % notesMaryLamb.length]);
       element.classList.add("highlight");
-}, 100)
+    }
+}, 250)
+
 };
+
 // function songWatch() {
 //   var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];
 //   for (i = 0; i < notesMaryLamb.length; i++) {
@@ -239,10 +239,10 @@ function checkPass() {
     }
 };
 
-$("li").on("click", function() {
-  $("li").removeClass("active font-weight-bold");
-  $(this).addClass("active font-weight-bold");
-});
+// $("li").on("click", function() {
+//   $("li").removeClass("active font-weight-bold");
+//   $(this).addClass("active font-weight-bold");
+// });
 
 
 // web midi
@@ -301,4 +301,3 @@ WebMidi.enable(function (err) {
   }
 
 });
-
