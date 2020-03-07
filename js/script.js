@@ -159,19 +159,19 @@ var indexOfArray = 0;
 
 var theSong = "";
 
-function songSetup(theSong) {
+function songLearn(theSong) {
 
   var noteDiv;
 
-  if (theSong === "maryHadALittleLamb") {
+  if (theSong === "maryHadALittleLambLearn") {
     noteDiv = $("#note-" + notesMaryLamb[indexOfArray]);
-  } else if (theSong === "frereJacques") {
+  } else if (theSong === "frereJacquesLearn") {
     noteDiv = $("#note-" + notesFrereJacques[indexOfArray]);
-  } else if (theSong === "nbcLogo") {
+  } else if (theSong === "nbcLogoLearn") {
     noteDiv = $("#note-" + notesNBC[indexOfArray]);
-  } else if (theSong === "brunoMarsUptownFunk") {
+  } else if (theSong === "brunoMarsUptownFunkLearn") {
     noteDiv = $("#note-" + notesBrunoMars[indexOfArray]);
-  } else if (theSong === "threeBlindMice") {
+  } else if (theSong === "threeBlindMiceLearn") {
     noteDiv = $("#note-" + notesThreeBlindMice[indexOfArray]);
   }
   
@@ -185,20 +185,20 @@ function songSetup(theSong) {
     indexOfArray++
 
     $("#note-" + notesThreeBlindMice[indexOfArray]).addClass("highlight");
-    songSetup()
+    songLearn()
   });
 
 };
 
-
+$(document).on("click", ".btn", function() {
+  $(".btn-danger").removeClass("btn-danger").addClass("btn-primary");
+  $(this).removeClass("btn-primary").addClass("btn-danger");
+});
 
 // $("li").on("click", function() {
 //   $("li").removeClass("active font-weight-bold");
 //   $(this).addClass("active font-weight-bold");
 // });
-
-
-
 
 function songWatch() {
   var notesMaryLamb       = ["e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "d-3", "d-3", "d-3", "e-3", "g-3", "g-3", "e-3", "d-3", "c-3", "d-3", "e-3", "e-3", "e-3", "e-3", "d-3", "d-3", "e-3", "d-3", "c-3", "c-3"];

@@ -175,6 +175,11 @@ img {
   vertical-align: middle;
 }
 
+.btn-sm {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 10px;
+}
+
 @media only screen and (max-width:768px) {
 
   .white {
