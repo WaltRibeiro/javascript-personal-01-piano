@@ -177,7 +177,15 @@ img {
 
 .btn-sm {
   padding: 0px 0px 0px 0px;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 15px 0px 15px;
+}
+
+.list-group{
+  max-height: 250px;
+  margin: 10px 0px 10px 0px;
+  overflow:scroll;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 @media only screen and (max-width:768px) {
@@ -210,13 +218,9 @@ img {
     border: 1px solid #333;
   }
 
-}
-
-
-
-@media screen and (max-width: 620px) {
   .hideImage {
     visibility: hidden;
     /* opacity: 0; */
   }
+
 }
